@@ -1,0 +1,197 @@
+@import "./scss/bootstrap.scss";
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    .josefin{
+        font-family: josefin sans;
+    }
+    .roboto{
+        font-family: roboto;
+    }
+}
+
+header {
+  // background-color: blue;
+  //    background-image: linear-gradient(to right, white, #f9fff6) ;
+  min-height: 100vh;
+  width: 100%;
+
+  nav {
+    background-color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: drop-shadow(1px 1px 5px rgba(133, 133, 133, 0.42));
+    font-family: roboto;
+
+    .d-flex {
+      justify-content: space-between;
+      align-items: center;
+      .btn{
+        border: solid #474747 2px;
+      }
+    }
+  }
+
+  .header-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to right, white, #f9fff6);
+    z-index: -1;
+
+    .ellipse-wrapper {
+      position: absolute;
+      z-index: -2;
+      top: 15%;
+      height: inherit;
+      width: 100%;
+      //    right: -10%;
+      background-color: red;
+      //    width: 20rem;
+
+      .ellipse-1 {
+        background-color: #dfedd7;
+        height: 14rem;
+        width: 14rem;
+        border-radius: 50%;
+        filter: blur(8px);
+        position: absolute;
+        left: 80%;
+        top: 15%;
+      }
+      .ellipse-2 {
+        background-color: #f4c092;
+        height: 14rem;
+        width: 14rem;
+        border-radius: 50%;
+        filter: blur(8px);
+        position: absolute;
+        right: -4%;
+        top: 15%;
+      }
+      
+    }
+    .banner{
+        // background-color: red;
+        height: 45rem;
+        justify-content: space-between;
+        align-items: center;
+        .img-girls{
+            @media screen and (max-width: 1000px){
+                display: none;
+            }
+        }
+        .text-content{
+            // background-color: blue;
+            height: 30rem;
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-size: 50px;
+                font-family: josefin sans;
+            }
+            p{
+                // background-color: green;
+                width: 20rem;
+                font-size: 20px;
+                font-family: roboto;
+                @media screen and (max-width: 1000px){
+                    width: 30rem;
+                }
+            }
+            
+            
+            .bum{
+                text-align: left;
+                font-size: 20px;
+                font-family: roboto;
+                button{
+                    background-color:#F6821F ;
+                    border-radius: 5px;
+                }
+                
+                
+            }
+            
+        }
+    }
+  }
+}
+.green-box{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    // background-color: red;
+    
+    
+    .green{
+        background-color: #F5FFF6 ;
+        height: 9rem;
+        width: 15rem;
+        margin-bottom: 10px;
+        border: solid #C0FDC0 1px;
+        border-radius: 3%;
+        p{
+          font-size: 10px;  
+        }
+        h6{
+            font-size: 15px;
+            
+        }
+    }
+    .arrow{
+        position: absolute;
+        top: -50%;
+        right: 0;
+    }
+}
+
+.about{
+    display: flex;
+    // background-color: orange;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    
+    @media screen and (max-width:1000px){
+        flex-direction: column;
+    }
+    .text-content{
+        // background-color: red;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        min-width: 50%;
+        
+        .watch{
+            // background-color: pink;
+            justify-content: left;
+            align-items: center;
+            gap: 1rem;
+        }
+
+    }
+    .kids{
+        // background-color: blue;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+
+        &-top {
+            display: flex;
+            align-items: baseline;
+            gap: 2rem;
+            @media screen and (max-width:768px){
+                flex-direction: column;
+        img {
+            width: 100%;
+        }
+            }
+        }
+
+    
+        
+    }
+}
